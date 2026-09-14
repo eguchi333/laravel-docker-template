@@ -12,6 +12,7 @@ SELECT * FROM todos WHERE id = $id;
 Modelオブジェクト
 ### saveメソッドは何を基準にINSERTとUPDATEを切り替えているのか
 saveメソッドを行うよりも前にfindメソッドを実行しルートパラメータで指定したidのレコードを取得しているかどうか
+Todoインスタンス内のwasRecentlyCreatedプロパティがtrueかfalseか
 
 ## Todo論理削除
 
