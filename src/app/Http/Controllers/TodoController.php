@@ -8,6 +8,8 @@ use App\Todo;
 
 class TodoController extends Controller
 {
+    private $todo;
+
     public function __construct(Todo $todo)
     {
         $this->todo = $todo;
@@ -26,7 +28,7 @@ class TodoController extends Controller
     public function store(TodoRequest $request)
     {
         $inputs = $request->all();
-        
+        dd($inputs);
         $this->todo->fill($inputs);
         $this->todo->save();
 
